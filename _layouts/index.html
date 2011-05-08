@@ -39,50 +39,11 @@
         </div>
         
         <div id="article" role="main">
-            <h1>Front End Development Best Practice</h1>
-            
-            <section id="introduction">
-                <p>This document is a set of standards, best practices, and
-                guidelines for front end development. This documentation has
-                been collated through many years experience by a multitude of
-                front end developers, front end architects, and front end
-                development managers.</p>
-            </section>
-        
-            <section id="semantic-markup">
-                <h2>Semantic Markup</h2>
-            </section>
-            
-            <section id="presentation">
-                <h2>Presentation</h2>
-            </section>
-            
-            <section id="dynamic-behaviour">
-                <h2>Dynamic Behaviour</h2>
-            </section>
-            
-            <section id="accessibility">
-                <h2>Accessibility</h2>
-            </section>
-            
-            <section id="seo">
-                <h2>Search Engine Optimisation</h2>
-            </section>
-
+            {{ content }}
         </div>
         
-        <div id="nav" role="navigation">
-            <ul>
-                <li><a href="#semantic-markup">Semantic Markup</a></li>
-                <li><a href="#presentation">Presentation</a></li>
-                <li><a href="#dynamic-behaviour">Dynamic Behaviour</a></li>
-                <li><a href="#accessibility">Accessibility</a></li>
-                <li><a href="#seo"><abbr title="Search Engine Optimisation">SEO</abbr></a></li>
-            </ul>
-        </div>
+        {% include nav.html %}
         
-        <p id="footer">
-            © 2011 <a href="http://timhuegdon.com/" rel="me">Tim Huegdon</a>
-        </p>
+        {% include foot.html %}
     </body>
 </html>
