@@ -22,14 +22,13 @@ Always use HTML instead of XHTML. Whilst the well-formed nature of XHTML is cert
  *  `document.write` is unsupported in XHTML.
  *  `iframes` are not supported in XHTML.
 
-{% highlight html %}
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-    "http://www.w3.org/TR/html4/strict.dtd">
-{% endhighlight %}
+In the brave new world of [HTML as a living standard](http://whatwg.org/html), the correct DOCTYPE to use is as follows:
 
 {% highlight html %}
 <!DOCTYPE html>
 {% endhighlight %}
+
+Short and sweet. This DOCTYPE is supported in all modern browsers and will enforce standards compliance in IE9, IE8, and IE7.
 
 <h2 id="presentation">Presentation</h2>
 
