@@ -42,7 +42,6 @@ The following effects can be done in CSS3, with no fallback when not supported i
 
 Don't forget to add vendor-specific style properties where necessary.
 
-
 ### Use CSS hacks to work around Internet Explorer CSS issues
 
 Where Internet Explorer 6 and 7 need extra style rules to create a non-broken browsing experience, use the underscore and/or star hacks to create IE-specific style rules. Use CSS comments to document the use of CSS hacks. 
@@ -55,6 +54,33 @@ Where Internet Explorer 6 and 7 need extra style rules to create a non-broken br
 {% endhighlight %}
 
 Keep these CSS hacks as close as possible to the rest of the styles that affect the same selector. Don't separate them into a separate IE-only stylesheet, since they will be overlooked and forgotten when the main style rules change.
+
+
+### Use overflow to self-clear contained floats
+
+Where possible use `overflow` on the containing element to clear floated elements.
+
+{% highlight css %}
+.module {
+	overflow: hidden;
+}
+{% endhighlight %}
+
+Where content inside of this container needs to spill out of the containing div (for example a dropdown menu near the bottom of the container), then use the content after method of clearing (using `zoom: 1` for Internet Explorer):
+
+{% highlight css %}
+.editing-panel {
+	overflow: visible /* To unset the a previous style-rule */
+	_zoom: 1; /* self-clearing for IE */
+}
+.editing-panel:after {
+	content: '.';
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+{% endhighlight %}
 
 
 
