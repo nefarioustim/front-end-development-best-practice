@@ -39,7 +39,7 @@ There are many reasons to avoid serving XHTML as XML:
 
 Some authors opt to write markup that will function when served as XML or
 text/html. Given the subtle differences between the handling of XML and
-text/html, this a great way to double the testing you need to do for no
+text/html, this is a great way to double the testing you need to do for no
 significant benefit.
 
 Whilst the well-formed nature of XHTML is certainly attractive to the markup
