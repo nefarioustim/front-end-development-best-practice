@@ -14,11 +14,6 @@ body {
 	margin: 0 auto;
 }
 
-footer {
-	clear: both;
-	text-align: center;
-}
-
 h1 {
 	margin: 15px 0 30px;
 }
@@ -41,16 +36,17 @@ h2 {
 	font-size: 1px;
 }
 
-/* Columns */
+/* Grid */
 
-article {
+#article {
 	float: left;
 	*display: inline;
 	width: 726px;
 	padding: 12px;
+	text-shadow: 0 1px 1px #dddddd;
 }
 
-nav {
+#nav {
 	background: #5D7FA6;
 	float: right;
 	*display: inline;
@@ -59,17 +55,22 @@ nav {
 	margin: 0 12px;
 }
 
+#footer {
+	clear: both;
+	text-align: center;
+}
+
 /* Navigation */
 
-nav li {
+#nav li {
 	padding: 0.5ex 0;
 }
-nav a {
+#nav a {
 	color: #D6D6DE;
 	text-decoration: none;
 }
-nav a:focus,
-nav a:hover,
-nav a:active {
+#nav a:focus,
+#nav a:hover,
+#nav a:active {
 	color: #ffffff;
 }
