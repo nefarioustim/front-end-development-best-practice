@@ -16,14 +16,13 @@ table {
 	font: 100%;
 }
 
-pre,
 code,
 kbd,
 samp,
 tt {
-	font-family: monospace;
+	font-family: monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
 	*font-size: 108%;
-	line-height: 100%;
+	line-height: 1.2;
 }
 
 h1,
@@ -37,7 +36,7 @@ h6 {
 }
 
 h1 {
-	font-size: 32px;
+	font-size: 38px;
 }
 
 h2 {
