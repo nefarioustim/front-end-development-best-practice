@@ -22,13 +22,15 @@ Always use HTML instead of XHTML. Whilst the well-formed nature of XHTML is cert
  *  `document.write` is unsupported in XHTML.
  *  `iframes` are not supported in XHTML.
 
-In the brave new world of [HTML as a living standard](http://whatwg.org/html), the correct DOCTYPE to use is as follows:
+In the brave new world of [HTML as a living standard](http://whatwg.org/html), the correct `DOCTYPE` to use is as follows:
 
 {% highlight html %}
 <!DOCTYPE html>
 {% endhighlight %}
 
-Short and sweet. This DOCTYPE is supported in all modern browsers and will enforce standards compliance in IE9, IE8, and IE7.
+### No whitespace before the `DOCTYPE`
+
+### Semantic element identifiers
 
 <h2 id="presentation">Presentation</h2>
 
@@ -49,8 +51,11 @@ Test, and ensure that the visitor gets a useable and not-obviously-broken experi
 * Internet Explorer 6
 * Safari 4
 
+### Use server-side browser detection and add classes
 
 <h2 id="dynamic-behaviour">Dynamic Behaviour</h2>
+
+### Add a `js` class when JavaScript is available
 
 <h2 id="accessibility">Accessibility</h2>
 
