@@ -38,15 +38,20 @@ In the brave new world of [HTML as a living standard](http://whatwg.org/html), t
 
 A-Grade experience: Test, and ensure that the visitor gets a first-class browsing and interaction experience in the following browsers:
 
-* Mozilla Firefox 3.5+
-* Internet Explorer 7+
-* Safari 5+ (on OSX)
+* Internet Explorer 7+ (on Windows)
+* Mozilla Firefox 3.5+ (on OSX and Windows)
 * Chrome 5+ (on OSX and Windows)
+* Safari 5+ (on OSX)
+* Opera (on Windows)
+
+This doesn't mean the pages have to be pixel-perfect between browsers, but as close as reasonably possible to the design requirement with all of the functionality and interactivity working perfectly.
 
 Test, and ensure that the visitor gets a useable and not-obviously-broken experience with:
 
 * Internet Explorer 6
 * Safari 4
+
+
 
 ### Use server-side browser detection and add classes
 
@@ -91,7 +96,7 @@ Where content inside of this container needs to spill out of the containing div 
 
 {% highlight css %}
 .editing-panel {
-	overflow: visible /* To unset the a previous style-rule */
+	overflow: visible /* To unset a previous style-rule */
 	_zoom: 1; /* self-clearing for IE */
 }
 .editing-panel:after {
