@@ -178,7 +178,7 @@ Under the bonnet browsers that don't have a native `document.getElementsByClassN
 
 ### Use references instead of repetitive DOM lookups
 
-If you are doing some non-trivial work with a particular jquery wrapped set, store the wrapped set as a reference so that you can avoid recalculating the same wrapped set over and over. This approach also allows breaking down the code into easier to digest and understandable chunks.
+If you are doing some non-trivial work with a particular jQuery wrapped set, store the wrapped set as a reference so that you can avoid recalculating the same wrapped set over and over. This approach also allows breaking down the code into easier to digest and understandable chunks.
 
 Also to make it more obvious that we have a reference to a jQuery wrapped set prefix the reference variable with a `$`.
 
