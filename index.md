@@ -11,6 +11,31 @@ end development. This documentation has been collated through many years
 experience by a multitude of front end developers, front end architects, and
 front end development managers.
 
+<h2 id="browsers">Know your browsers</h2>
+
+It's important to understand the technologies being used to browse your content and test accordingly. This information is best gleaned from your web analytics and log files.
+
+However, even once you have analysed and assimilated that information, it is a good idea to maintain a level of graded browser support:
+
+Primarily, test and ensure that the visitor gets a first-class browsing and interaction experience in the following browsers:
+
+* Internet Explorer 7+ (on Windows)
+* Mozilla Firefox 3.6+ (on OSX and Windows)
+* Chrome 5+ (on OSX and Windows)
+* Safari 5+ (on OSX)
+* Opera 10+ (on Windows)
+
+This doesn't mean the pages have to be pixel-perfect between browsers, but as close as reasonably possible to the design requirement with all of the functionality and interactivity working perfectly.
+
+Secondly, test and ensure that the visitor gets a useable and not-obviously-broken experience with:
+
+* Internet Explorer 6
+* Safari 4
+
+Once you have a better understanding of the users of your site, you may opt to drop support for any of these combinations.
+
+Other browser support matrixes are available, such as [YUI Graded Browser Support](http://developer.yahoo.com/yui/articles/gbs/), the [BBC Browser Support Standards](http://www.bbc.co.uk/guidelines/futuremedia/technical/browser_support.shtml#support_table), and [jQuery Browser Compatibility](http://docs.jquery.com/Browser_compatibility).
+
 <h2 id="semantic-markup">Semantic Markup</h2>
 
 ### Use HTML not XHTML
@@ -20,22 +45,23 @@ Always use HTML served as text/html instead of XHTML.
 There are many reasons to avoid serving XHTML as XML:
 
   * XML has draconian error-handling. Some browsers (like Firefox) implement
-    this by rendering a Yellow Screen of Death instead of a document. Other
-    browsers (like Opera) swap to rendering the document as if it were
+    this by rendering a [Yellow Screen of
+    Death](http://kb.mozillazine.org/XML_parsing_error) instead of a document.
+    Other browsers (like Opera) swap to rendering the document as if it were
     text/html. Websites commonly mix up code from lots of different sources
     (developers, non-technical authors, third-party content like feeds,
-    third-party code like libraries and ads). Sanitizing and sandboxing these
-    markup sources is very hard to do perfectly and the costs of failure can be
-    significant (e.g. loss of ad revenue on an entertainment site, forfeiting a
-    sale on an ecommerce site, blocking access to information in an emergency
-    on a government site).
+    third-party code like libraries and ads). Sanitising and sandboxing these
+    markup sources is very hard to do perfectly and the costs of failure can
+    be significant (e.g. loss of ad revenue on an entertainment site,
+    forfeiting a sale on an ecommerce site, blocking access to information in
+    an emergency on a government site).
   * Some features widely used in text/html, such as `document.write`, error in
     XML. Even if you avoid these features in your code, third-party code you
     wish to integrate (libraries, widgets, ads, feed content, etc.) may not.
   * XHTML has generally poorer compatibility than HTML, as it’s never been a
-    priority for browser developers. By default, IE < 9 shows a download dialog
-    instead of rendering a webpage when XHTML is served with its official XHTML
-    media type (application/xhtml+xml).
+    priority for browser developers. By default, IE < 9 shows a download
+    dialog instead of rendering a webpage when XHTML is served with its
+    official XHTML media type (application/xhtml+xml).
 
 Some authors opt to write markup that will function when served as XML or
 text/html. Given the subtle differences between the handling of XML and
@@ -70,28 +96,6 @@ supporting legacy documents.
    * Henri Sivonen: [Activating Browser Modes with Doctype](http://hsivonen.iki.fi/doctype/)
 
 ### Semantic element identifiers
-
-<h2 id="browsers">Browsers</h2>
-
-### Baseline browser support
-
-A-Grade experience: Test, and ensure that the visitor gets a first-class browsing and interaction experience in the following browsers:
-
-* Internet Explorer 7+ (on Windows)
-* Mozilla Firefox 3.6+ (on OSX and Windows)
-* Chrome 5+ (on OSX and Windows)
-* Safari 5+ (on OSX)
-* Opera 10+ (on Windows)
-
-This doesn't mean the pages have to be pixel-perfect between browsers, but as close as reasonably possible to the design requirement with all of the functionality and interactivity working perfectly.
-
-Test, and ensure that the visitor gets a useable and not-obviously-broken experience with:
-
-* Internet Explorer 6
-* Safari 4
-
-Other browser support matrixes are available, such as [YUI Graded Browser Support](http://developer.yahoo.com/yui/articles/gbs/), the [BBC Browser Support Standards](http://www.bbc.co.uk/guidelines/futuremedia/technical/browser_support.shtml#support_table), and [jQuery Browser Compatibility](http://docs.jquery.com/Browser_compatibility).
-
 
 ### Use server-side browser detection and add classes
 
