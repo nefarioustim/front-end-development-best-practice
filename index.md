@@ -36,4 +36,9 @@ Short and sweet. This DOCTYPE is supported in all modern browsers and will enfor
 
 <h2 id="accessibility">Accessibility</h2>
 
+### Use links and input buttons for clickable elements
+
+Links and buttons are focusable and activatable by default in a browser, which means they are perceivable and operable to screen reader users and keyboard-only users. Rich JavaScript widgets (like video player controls) should be progressively enhanced on-top of elements that, by default, are already accessible.
+
+
 <h2 id="seo">Search Engine Optimisation</h2>
