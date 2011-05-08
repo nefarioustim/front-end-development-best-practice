@@ -23,13 +23,21 @@ Always use HTML instead of XHTML. Whilst the well-formed nature of XHTML is cert
  *  `document.write` is unsupported in XHTML.
  *  `iframes` are not supported in XHTML.
 
-In the brave new world of [HTML as a living standard](http://whatwg.org/html), the correct `DOCTYPE` to use is as follows:
+### Use the HTML Living Standard `DOCTYPE`
+
+In the brave new world of [HTML as a living standard](http://whatwg.org/html),
+the ideal `DOCTYPE` to use is as follows:
 
 {% highlight html %}
 <!DOCTYPE html>
 {% endhighlight %}
 
-### No whitespace before the `DOCTYPE`
+The first character of the `DOCTYPE` string should be the very first character
+in your document (even whitespace counts).  Other `DOCTYPE` strings may cause
+browsers to render your document using various ‘quirk’ modes intended for
+supporting legacy documents.
+
+   * Henri Sivonen: [Activating Browser Modes with Doctype](http://hsivonen.iki.fi/doctype/)
 
 ### Semantic element identifiers
 
