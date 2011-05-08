@@ -17,18 +17,27 @@ front end development managers.
 
 Always use HTML instead of XHTML. Whilst the well-formed nature of XHTML is certainly attractive to the markup purist, there are many reasons not to use it:
 
+ *  XML has draconian error-handling. Some browsers (like Firefox) implement this by rendering a Yellow Screen of Death instead of a document. Other browsers (like Opera) swap to rendering the document as if it were text/html. Websites commonly mix up code from lots of different sources (developers, non-technical authors, third-party content like feeds, third-party code like libraries and ads). Sanitizing and sandboxing these markup sources is very hard to do perfectly and the costs of failure can be significant (e.g. loss of ad revenue on an entertainment site, forfeiting a sale on an ecommerce site, blocking access to information in an emergency on a government site).
  *  To display correctly in IE, XHTML must be served with the incorrect mime-type.
  *  IE's support of XHTML can be described as "buggy" at best.
  *  `document.write` is unsupported in XHTML.
  *  `iframes` are not supported in XHTML.
 
-In the brave new world of [HTML as a living standard](http://whatwg.org/html), the correct `DOCTYPE` to use is as follows:
+### Use the HTML Living Standard `DOCTYPE`
+
+In the brave new world of [HTML as a living standard](http://whatwg.org/html),
+the ideal `DOCTYPE` to use is as follows:
 
 {% highlight html %}
 <!DOCTYPE html>
 {% endhighlight %}
 
-### No whitespace before the `DOCTYPE`
+The first character of the `DOCTYPE` string should be the very first character
+in your document (even whitespace counts).  Other `DOCTYPE` strings may cause
+browsers to render your document using various ‘quirk’ modes intended for
+supporting legacy documents.
+
+   * Henri Sivonen: [Activating Browser Modes with Doctype](http://hsivonen.iki.fi/doctype/)
 
 ### Semantic element identifiers
 
@@ -119,9 +128,7 @@ Otherwise…
 
 ### Add a `js` class when JavaScript is available
 
-
 <h2 id="jquery">jQuery</h2>
-
 
 ### Use element names when selecting by class names
 
@@ -139,7 +146,6 @@ var $todoItems = $('li.todo');
 
 Under the bonnet browsers that don't have a native `document.getElementsByClassName()` method, will use a `document.getElementsByTagName()` method with the element name instead of a `*`. This will return a smaller Node list and thus be quicker.
 
-
 ### Use references instead of repetitive DOM lookups
 
 If you are doing some non-trivial work with a particular jquery wrapped set, store the wrapped set as a reference so that you can avoid recalculating the same wrapped set over and over. This approach also allows breaking down the code into easier to digest and understandable chunks.
@@ -155,7 +161,6 @@ if ($items.length) {
 }
 {% endhighlight %}
 
-
 ### Break chained methods over multiple lines for readability
 
 Although chaining is a useful feature of jQuery, it's too easy to create unreadable code. So be generous on the use of spacing and linebreaks and aim to make the code as readable as possible.
@@ -167,7 +172,6 @@ Although chaining is a useful feature of jQuery, it's too easy to create unreada
 		.bind('save.form', saveFormHandler)
 		.removeClass('disableSubmit');
 {% endhighlight %}
-
 
 <h2 id="accessibility">Accessibility</h2>
 
