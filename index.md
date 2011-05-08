@@ -17,11 +17,28 @@ front end development managers.
 
 Always use HTML instead of XHTML. Whilst the well-formed nature of XHTML is certainly attractive to the markup purist, there are many reasons not to use it:
 
- *  XML has draconian error-handling. Some browsers (like Firefox) implement this by rendering a Yellow Screen of Death instead of a document. Other browsers (like Opera) swap to rendering the document as if it were text/html. Websites commonly mix up code from lots of different sources (developers, non-technical authors, third-party content like feeds, third-party code like libraries and ads). Sanitizing and sandboxing these markup sources is very hard to do perfectly and the costs of failure can be significant (e.g. loss of ad revenue on an entertainment site, forfeiting a sale on an ecommerce site, blocking access to information in an emergency on a government site).
- *  To display correctly in IE, XHTML must be served with the incorrect mime-type.
- *  IE's support of XHTML can be described as "buggy" at best.
- *  `document.write` is unsupported in XHTML.
- *  `iframes` are not supported in XHTML.
+  * XML has draconian error-handling. Some browsers (like Firefox) implement
+    this by rendering a Yellow Screen of Death instead of a document. Other
+    browsers (like Opera) swap to rendering the document as if it were
+    text/html. Websites commonly mix up code from lots of different sources
+    (developers, non-technical authors, third-party content like feeds,
+    third-party code like libraries and ads). Sanitizing and sandboxing these
+    markup sources is very hard to do perfectly and the costs of failure can be
+    significant (e.g. loss of ad revenue on an entertainment site, forfeiting a
+    sale on an ecommerce site, blocking access to information in an emergency
+    on a government site).
+  * Some features widely used in text/html, such as `document.write`, error in
+    XML. Even if you avoid these features in your code, third-party code you
+    wish to integrate (libraries, widgets, ads, feed content, etc.) may not.
+  * XHTML has generally poorer compatibility than HTML, as it’s never been a
+    priority for browser developers. By default, IE < 9 shows a download dialog
+    instead of rendering a webpage when XHTML is served with the official XHTML
+    media type (application/xhtml+xml).
+
+See also:
+
+   * David Hammond: [Beware of XHTML](http://www.webdevout.net/articles/beware-of-xhtml)
+   * [WHATWG: HTML vs. XHTML](http://wiki.whatwg.org/wiki/HTML_vs._XHTML)
 
 ### Use the HTML Living Standard `DOCTYPE`
 
