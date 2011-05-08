@@ -15,7 +15,9 @@ front end development managers.
 
 ### Use HTML not XHTML
 
-Always use HTML instead of XHTML. Whilst the well-formed nature of XHTML is certainly attractive to the markup purist, there are many reasons not to use it:
+Always use HTML served as text/html instead of XHTML.
+
+There are many reasons to avoid serving XHTML as XML:
 
   * XML has draconian error-handling. Some browsers (like Firefox) implement
     this by rendering a Yellow Screen of Death instead of a document. Other
@@ -32,13 +34,24 @@ Always use HTML instead of XHTML. Whilst the well-formed nature of XHTML is cert
     wish to integrate (libraries, widgets, ads, feed content, etc.) may not.
   * XHTML has generally poorer compatibility than HTML, as it’s never been a
     priority for browser developers. By default, IE < 9 shows a download dialog
-    instead of rendering a webpage when XHTML is served with the official XHTML
+    instead of rendering a webpage when XHTML is served with its official XHTML
     media type (application/xhtml+xml).
+
+Some authors opt to write markup that will function when served as XML or
+text/html. Given the subtle differences between the handling of XML and
+text/html, this a great way to double the testing you need to do for no
+significant benefit.
+
+Whilst the well-formed nature of XHTML is certainly attractive to the markup
+purist, you could use a linter to enforce your chosen style of (potentially
+XMLish) HTML.
 
 See also:
 
    * David Hammond: [Beware of XHTML](http://www.webdevout.net/articles/beware-of-xhtml)
    * [WHATWG: HTML vs. XHTML](http://wiki.whatwg.org/wiki/HTML_vs._XHTML)
+   * [W3C: XHTML Media Types - Second Edition](http://www.w3.org/TR/xhtml-media-types/)
+   * [HTML Lint](http://lint.brihten.com/html/)
 
 ### Use the HTML Living Standard `DOCTYPE`
 
