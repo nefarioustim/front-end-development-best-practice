@@ -59,6 +59,9 @@ h2 {
 	clear: both;
 	text-align: center;
 }
+#footer p {
+	margin: 6px 0;
+}
 
 /* Navigation */
 
