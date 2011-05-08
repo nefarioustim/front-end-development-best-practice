@@ -17,6 +17,7 @@ front end development managers.
 
 Always use HTML instead of XHTML. Whilst the well-formed nature of XHTML is certainly attractive to the markup purist, there are many reasons not to use it:
 
+ *  XML has draconian error-handling. Some browsers (like Firefox) implement this by rendering a Yellow Screen of Death instead of a document. Other browsers (like Opera) swap to rendering the document as if it were text/html. Websites commonly mix up code from lots of different sources (developers, non-technical authors, third-party content like feeds, third-party code like libraries and ads). Sanitizing and sandboxing these markup sources is very hard to do perfectly and the costs of failure can be significant (e.g. loss of ad revenue on an entertainment site, forfeiting a sale on an ecommerce site, blocking access to information in an emergency on a government site).
  *  To display correctly in IE, XHTML must be served with the incorrect mime-type.
  *  IE's support of XHTML can be described as "buggy" at best.
  *  `document.write` is unsupported in XHTML.
