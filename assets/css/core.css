@@ -1,0 +1,75 @@
+/* Main */
+
+html {
+	background: #AAC2D9;
+	background-size: auto;
+	overflow-y: scroll;
+	height: 100%;
+	min-height: 100%;
+}
+
+body {
+	color: #30547F;
+	width: 1002px;
+	margin: 0 auto;
+}
+
+footer {
+	clear: both;
+	text-align: center;
+}
+
+h1 {
+	margin: 15px 0 30px;
+}
+
+h2,
+p {
+	margin: 15px 0;
+}
+
+h2 {
+	border-bottom: 1px dotted #5D7FA6;
+	margin-top: 30px;
+}
+
+/* Accessibles */
+
+#top {
+	position: absolute;
+	left: -9999em;
+	font-size: 1px;
+}
+
+/* Columns */
+
+article {
+	float: left;
+	*display: inline;
+	width: 726px;
+	padding: 12px;
+}
+
+nav {
+	background: #5D7FA6;
+	float: right;
+	*display: inline;
+	width: 198px;
+	padding: 97px 12px 12px;
+	margin: 0 12px;
+}
+
+/* Navigation */
+
+nav li {
+	padding: 0.5ex 0;
+}
+nav a {
+	color: #D6D6DE;
+	text-decoration: none;
+}
+nav a:focus,
+nav a:hover,
+nav a:active {
+	color: #ffffff;
+}

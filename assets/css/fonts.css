@@ -1,0 +1,53 @@
+body {
+	font: 16px/1.4 "helvetica neue", arial, helvetica, sans-serif;
+	*font-size:small;
+	*font:x-small;
+}
+
+select,
+input,
+button,
+textarea {
+	font: 99% "helvetica neue", arial, helvetica, sans-serif;
+}
+
+table {
+	font-size: inherit;
+	font: 100%;
+}
+
+pre,
+code,
+kbd,
+samp,
+tt {
+	font-family: monospace;
+	*font-size: 108%;
+	line-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	/*font-family: georgia, times, serif;*/
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+footer {
+	font-size: 9px;
+}
+
+#top {
+	font-size: 12px;
+}
