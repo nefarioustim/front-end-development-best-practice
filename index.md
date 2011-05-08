@@ -42,7 +42,7 @@ A-Grade experience: Test, and ensure that the visitor gets a first-class browsin
 * Mozilla Firefox 3.5+ (on OSX and Windows)
 * Chrome 5+ (on OSX and Windows)
 * Safari 5+ (on OSX)
-* Opera (on Windows)
+* Opera 10+ (on Windows)
 
 This doesn't mean the pages have to be pixel-perfect between browsers, but as close as reasonably possible to the design requirement with all of the functionality and interactivity working perfectly.
 
