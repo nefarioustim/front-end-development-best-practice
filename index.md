@@ -182,14 +182,14 @@ If you are doing some non-trivial work with a particular jQuery wrapped set, sto
 
 Also to make it more obvious that we have a reference to a jQuery wrapped set prefix the reference variable with a `$`.
 
-<% highlight javascript %>
+{% highlight javascript %}
 var $items = $('ul.checklist li');
 
 if ($items.length) {
 	$('span.total').text($items.length);
 	$items.filter('.done').remove();
 }
-<% endhighlight %>
+{% endhighlight %}
 
 ### Break chained methods over multiple lines for readability
 
