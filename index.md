@@ -203,6 +203,27 @@ Although chaining is a useful feature of jQuery, it's too easy to create unreada
 		.removeClass('disableSubmit');
 {% endhighlight %}
 
+<h2 id="usability">Usability</h2>
+
+### Always put a useful URL in `href`
+
+Browsers allow users to do various things to hyperlinks. Most obviously, you
+can open the link in the current browsing context (tab or window). But other
+secondary functions are often provided, including opening the link in another
+browsing context, bookmarking the link, and copying the link elsewhere. Browser
+addons add yet more functionality, such as opening the link in a different
+browser or sharing it via social bookmarking sites. Sometimes these secondary
+functions are attached to pressing a key and mouse button in combination,
+sometimes they are listed in the context menu.
+
+The common practice of using `a href="#"` as a hook for some JS to transition
+to a new state (e.g. open a dialog for adding an item) breaks all these
+secondary functions, since the link in the `href` does not represent the
+expected state (instead it points to the top of the current document).
+
+Instead, use a URL that can serve up a representation of the expected state
+(e.g. http://example.com/add), or use a button if there’s no such URL.
+
 <h2 id="accessibility">Accessibility</h2>
 
 ### Use links and input buttons for clickable elements
