@@ -14,18 +14,36 @@ body {
 	margin: 0 auto;
 }
 
-h1 {
+#article h1 {
 	margin: 15px 0 30px;
 }
 
-h2,
-p {
+#article h2 {
+	border-bottom: 1px dotted #5D7FA6;
+}
+
+#article h2,
+#article p,
+#article ul,
+#article ol {
 	margin: 15px 0;
 }
 
-h2 {
-	border-bottom: 1px dotted #5D7FA6;
+#article h2,
+#article h3 {
 	margin-top: 30px;
+}
+
+#article li {
+	list-style-type: disc;
+	margin-left: 3em;
+}
+
+#article code,
+#article kbd,
+#article samp,
+#article tt {
+	color: #609;
 }
 
 /* Accessibles */
