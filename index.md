@@ -22,13 +22,35 @@ Always use HTML instead of XHTML. Whilst the well-formed nature of XHTML is cert
  *  `document.write` is unsupported in XHTML.
  *  `iframes` are not supported in XHTML.
 
-In the brave new world of [HTML as a living standard](http://whatwg.org/html), the correct DOCTYPE to use is as follows:
+In the brave new world of [HTML as a living standard](http://whatwg.org/html), the correct `DOCTYPE` to use is as follows:
 
 {% highlight html %}
 <!DOCTYPE html>
 {% endhighlight %}
 
-Short and sweet. This DOCTYPE is supported in all modern browsers and will enforce standards compliance in IE9, IE8, and IE7.
+### No whitespace before the `DOCTYPE`
+
+### Semantic element identifiers
+
+<h2 id="browsers">Browsers</h2>
+
+### Baseline browser support
+
+A-Grade experience: Test, and ensure that the visitor gets a first-class browsing and interaction experience in the following browsers:
+
+* Mozilla Firefox 3.5+
+* Internet Explorer 7+
+* Safari 5+ (on OSX)
+* Chrome 5+ (on OSX and Windows)
+
+Test, and ensure that the visitor gets a useable and not-obviously-broken experience with:
+
+* Internet Explorer 6
+* Safari 4
+
+### Use server-side browser detection and add classes
+
+Avoid client-side libraries such as [modernizr](http://www.modernizr.com/) which pollutes your markup with non-semantic element identifiers.
 
 <h2 id="presentation">Presentation</h2>
 
@@ -54,7 +76,6 @@ Where Internet Explorer 6 and 7 need extra style rules to create a non-broken br
 {% endhighlight %}
 
 Keep these CSS hacks as close as possible to the rest of the styles that affect the same selector. Don't separate them into a separate IE-only stylesheet, since they will be overlooked and forgotten when the main style rules change.
-
 
 ### Use overflow to self-clear contained floats
 
@@ -82,27 +103,15 @@ Where content inside of this container needs to spill out of the containing div 
 }
 {% endhighlight %}
 
-
-
-
-<h2 id="browsers">Browsers</h2>
-
-### Baseline browser support
-
-A-Grade experience: Test, and ensure that the visitor gets a first-class browsing and interaction experience in the following browsers:
-
-* Mozilla Firefox 3.5+
-* Internet Explorer 7+
-* Safari 5+ (on OSX)
-* Chrome 5+ (on OSX and Windows)
-
-Test, and ensure that the visitor gets a useable and not-obviously-broken experience with:
-
-* Internet Explorer 6
-* Safari 4
-
-
 <h2 id="dynamic-behaviour">Dynamic Behaviour</h2>
+
+### Add an `enhanced` class to modules or widgets
+
+Where possible.
+
+Otherwise…
+
+### Add a `js` class when JavaScript is available
 
 
 <h2 id="jquery">jQuery</h2>
@@ -126,6 +135,5 @@ if (items.length) {
 ### Use links and input buttons for clickable elements
 
 Links and buttons are focusable and activatable by default in a browser, which means they are perceivable and operable to screen reader users and keyboard-only users. Rich JavaScript widgets (like video player controls) should be progressively enhanced on-top of elements that, by default, are already accessible.
-
 
 <h2 id="seo">Search Engine Optimisation</h2>
