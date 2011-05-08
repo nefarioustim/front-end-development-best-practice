@@ -119,6 +119,51 @@ Otherwise…
 
 ### Add a `js` class when JavaScript is available
 
+<h2 id="jquery">jQuery</h2>
+
+### Use element names when selecting by class names
+
+In jQuery lookups for elements with a specific class where possible use an element name as part of the selector. So instead of :
+
+{% highlight javascript %}
+var $todoItems = $('.todo');
+{% endhighlight %}
+
+Specify an element name in the selector:
+
+{% highlight javascript %}
+var $todoItems = $('li.todo');
+{% endhighlight %}
+
+Under the bonnet browsers that don't have a native `document.getElementsByClassName()` method, will use a `document.getElementsByTagName()` method with the element name instead of a `*`. This will return a smaller Node list and thus be quicker.
+
+### Use references instead of repetitive DOM lookups
+
+If you are doing some non-trivial work with a particular jquery wrapped set, store the wrapped set as a reference so that you can avoid recalculating the same wrapped set over and over. This approach also allows breaking down the code into easier to digest and understandable chunks.
+
+Also to make it more obvious that we have a reference to a jQuery wrapped set prefix the reference variable with a `$`.
+
+<% highlight javascript %>
+var $items = $('ul.checklist li');
+
+if ($items.length) {
+	$('span.total').text($items.length);
+	$items.filter('.done').remove();
+}
+<% endhighlight %>
+
+### Break chained methods over multiple lines for readability
+
+Although chaining is a useful feature of jQuery, it's too easy to create unreadable code. So be generous on the use of spacing and linebreaks and aim to make the code as readable as possible.
+
+{% highlight javascript %}
+	$('form.signup')
+		.bind('submit', formSubmitHandler)
+		.bind('validate.form', validateFormHandler)
+		.bind('save.form', saveFormHandler)
+		.removeClass('disableSubmit');
+{% endhighlight %}
+
 <h2 id="accessibility">Accessibility</h2>
 
 ### Use links and input buttons for clickable elements
