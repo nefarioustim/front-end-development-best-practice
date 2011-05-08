@@ -1,3 +1,8 @@
+---
+title:      "Front End Development Best Practice"
+layout:     index
+---
+
 Front End Development Best Practice
 ===================================
 
