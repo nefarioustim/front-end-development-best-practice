@@ -15,12 +15,13 @@ body {
 }
 
 a {
-	color: #900;
+	color: #33c;
+	text-shadow: none;
 }
 a:focus,
 a:hover,
 a:active {
-	color: #000;
+	color: #933;
 }
 
 #article h1 {
@@ -115,4 +116,7 @@ div.highlight {
 	overflow: auto;
 	padding: 12px;
 	text-shadow: none;
+}
+#article div.highlight code {
+	color: #555;
 }
