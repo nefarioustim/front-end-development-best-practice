@@ -9,13 +9,11 @@ Front End Development Best Practice
 This document is a set of standards, best practices, and guidelines for front
 end development. This documentation has been collated through many years
 experience by a multitude of front end developers, front end architects, and
-front end development managers.
+front end development managers. Where possible we have attempted to include all references.
 
 <h2 id="browsers">Know your browsers</h2>
 
-It's important to understand the technologies being used to browse your content and test accordingly. This information is best gleaned from your web analytics and log files.
-
-However, even once you have analysed and assimilated that information, it is a good idea to maintain a level of graded browser support:
+It's important to understand the technologies being used to browse your content and test accordingly. This information is best gleaned from your web analytics and log files. However, even before you have analysed and assimilated that information, it is a good idea to maintain a level of **graded browser support**:
 
 Primarily, test and ensure that the visitor gets a first-class browsing and interaction experience in the following browsers:
 
