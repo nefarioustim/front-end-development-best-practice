@@ -104,6 +104,23 @@ Test, and ensure that the visitor gets a useable and not-obviously-broken experi
 
 <h2 id="dynamic-behaviour">Dynamic Behaviour</h2>
 
+
+<h2 id="jquery">jQuery</h2>
+
+### Use references instead of repetitive DOM lookups
+
+If you are doing some non-trivial work with a particular jquery wrapped set, store the wrapped set as a reference so that you can avoid recalculating the same wrapped set over and over. This approach also allows breaking down the code into easier to digest and understandable chunks.
+
+<% highlight javascript %>
+var items = $('ul.checklist li');
+
+if (items.length) {
+	$('span.total').text(items.length);
+	items.filter('.done').remove();
+}
+<% endhighlight %>
+
+
 <h2 id="accessibility">Accessibility</h2>
 
 ### Use links and input buttons for clickable elements
