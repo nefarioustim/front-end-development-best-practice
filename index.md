@@ -39,7 +39,7 @@ In the brave new world of [HTML as a living standard](http://whatwg.org/html), t
 A-Grade experience: Test, and ensure that the visitor gets a first-class browsing and interaction experience in the following browsers:
 
 * Internet Explorer 7+ (on Windows)
-* Mozilla Firefox 3.5+ (on OSX and Windows)
+* Mozilla Firefox 3.6+ (on OSX and Windows)
 * Chrome 5+ (on OSX and Windows)
 * Safari 5+ (on OSX)
 * Opera 10+ (on Windows)
@@ -51,6 +51,7 @@ Test, and ensure that the visitor gets a useable and not-obviously-broken experi
 * Internet Explorer 6
 * Safari 4
 
+Other browser support matrixes are available, such as [YUI Graded Browser Support](http://developer.yahoo.com/yui/articles/gbs/), the [BBC Browser Support Standards](http://www.bbc.co.uk/guidelines/futuremedia/technical/browser_support.shtml#support_table), and [jQuery Browser Compatibility](http://docs.jquery.com/Browser_compatibility).
 
 
 ### Use server-side browser detection and add classes
