@@ -150,6 +150,19 @@ if ($items.length) {
 <% endhighlight %>
 
 
+### Break chained methods over multiple lines for readability
+
+Although chaining is a useful feature of jQuery, it's too easy to create unreadable code. So be generous on the use of spacing and linebreaks and aim to make the code as readable as possible.
+
+{% highlight javascript %}
+	$('form.signup')
+		.bind('submit', formSubmitHandler)
+		.bind('validate.form', validateFormHandler)
+		.bind('save.form', saveFormHandler)
+		.removeClass('disableSubmit');
+{% endhighlight %}
+
+
 <h2 id="accessibility">Accessibility</h2>
 
 ### Use links and input buttons for clickable elements
