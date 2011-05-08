@@ -13,8 +13,18 @@ front end development managers.
 
 <h2 id="semantic-markup">Semantic Markup</h2>
 
+### Use HTML not XHTML
+
+Always use HTML instead of XHTML. Whilst the well-formed nature of XHTML is certainly attractive to the markup purist, there are many reasons not to use it:
+
+ *  To display correctly in IE, XHTML must be served with the incorrect mime-type.
+ *  IE's support of XHTML can be described as "buggy" at best.
+ *  `document.write` is unsupported in XHTML.
+ *  `iframes` are not supported in XHTML.
+
 {% highlight html %}
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
 {% endhighlight %}
 
 {% highlight html %}
