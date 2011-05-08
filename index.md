@@ -116,6 +116,24 @@ Otherwise…
 
 <h2 id="jquery">jQuery</h2>
 
+
+### Use element names when selecting by class names
+
+In jQuery lookups for elements with a specific class where possible use an element name as part of the selector. So instead of :
+
+{% highlight javascript %}
+var $todoItems = $('.todo');
+{% endhighlight %}
+
+Specify an element name in the selector:
+
+{% highlight javascript %}
+var $todoItems = $('li.todo');
+{% endhighlight %}
+
+Under the bonnet browsers that don't have a native `document.getElementsByClassName()` method, will use a `document.getElementsByTagName()` method with the element name instead of a `*`. This will return a smaller Node list and thus be quicker.
+
+
 ### Use references instead of repetitive DOM lookups
 
 If you are doing some non-trivial work with a particular jquery wrapped set, store the wrapped set as a reference so that you can avoid recalculating the same wrapped set over and over. This approach also allows breaking down the code into easier to digest and understandable chunks.
