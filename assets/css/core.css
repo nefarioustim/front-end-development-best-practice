@@ -14,6 +14,15 @@ body {
 	margin: 0 auto;
 }
 
+a {
+	color: #900;
+}
+a:focus,
+a:hover,
+a:active {
+	color: #000;
+}
+
 #article h1 {
 	margin: 15px 0 30px;
 }
