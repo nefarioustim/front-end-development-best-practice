@@ -34,6 +34,17 @@ In the brave new world of [HTML as a living standard](http://whatwg.org/html), t
 
 <h2 id="presentation">Presentation</h2>
 
+### Use CSS3 presentation effects over old presentation hacks
+
+The following effects can be done in CSS3, with no fallback when not supported in browsers (like Internet Explorer 6 & 7):
+
+* Rounded corners with `border-radius`
+* Gradient backgrounds with `background: gradient` and `background: linear-gradient`. Where possible, and when it causes no adverse effects use Microsoft's group of filters to add gradients for Internet Explorer. Also supply an appropriate default fallback background colour.
+* Box shadows with `box-shadow`
+
+Don't forget to add vendor-specific style properties where necessary.
+
+
 
 <h2 id="browsers">Browsers</h2>
 
