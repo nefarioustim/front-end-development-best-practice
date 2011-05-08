@@ -32,6 +32,24 @@ Short and sweet. This DOCTYPE is supported in all modern browsers and will enfor
 
 <h2 id="presentation">Presentation</h2>
 
+
+<h2 id="browsers">Browsers</h2>
+
+### Baseline browser support
+
+A-Grade experience: Test, and ensure that the visitor gets a first-class browsing and interaction experience in the following browsers:
+
+* Mozilla Firefox 3.5+
+* Internet Explorer 7+
+* Safari 5+ (on OSX)
+* Chrome 5+ (on OSX and Windows)
+
+Test, and ensure that the visitor gets a useable and not-obviously-broken experience with:
+
+* Internet Explorer 6
+* Safari 4
+
+
 <h2 id="dynamic-behaviour">Dynamic Behaviour</h2>
 
 <h2 id="accessibility">Accessibility</h2>
