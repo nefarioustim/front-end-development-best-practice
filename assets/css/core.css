@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	color: #30547F;
+	color: #10345F;
 	width: 1002px;
 	margin: 0 auto;
 }
@@ -24,6 +24,14 @@ a:active {
 	color: #933;
 }
 
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
 #article h1 {
 	margin: 15px 0 30px;
 }
@@ -33,20 +41,26 @@ a:active {
 }
 
 #article h2,
-#article p,
-#article ul,
-#article ol {
+#article p {
 	margin: 15px 0;
 }
 
-#article h2,
+#article h2 {
+	margin-top: 45px;
+}
+
 #article h3 {
 	margin-top: 30px;
 }
 
+#article ul,
+#article ol {
+	margin: 30px 0;
+}
+
 #article li {
 	list-style-type: disc;
-	margin-left: 3em;
+	margin: 15px 0 15px 45px;
 }
 
 #article code,
