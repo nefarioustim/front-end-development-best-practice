@@ -13,7 +13,7 @@ front end development managers. Where possible we have attempted to include all 
 
 <h2 id="browsers">Know your browsers</h2>
 
-It's important to understand the technologies being used to browse your content and test accordingly. This information is best gleaned from your web analytics and log files. However, even before you have analysed and assimilated that information, it is a good idea to maintain a level of **graded browser support**:
+It's important to understand the technologies being used to browse your content and test accordingly. This information is best gleaned from your web analytics and log files. Once you have you have analysed and assimilated that information, you'll likely want to follow a **graded browser support** strategy to allow you to focus your development and testing efforts on the browsers that matter the most to you whilst not being held back by legacy browsers being used by a small-but-significant proportion of your visitors. I lieu of having your own browser stats, here's what we'd recommend based on global browser market share:
 
 Primarily, test and ensure that the visitor gets a first-class browsing and interaction experience in the following browsers:
 
@@ -30,7 +30,7 @@ Secondly, test and ensure that the visitor gets a useable and not-obviously-brok
 * Internet Explorer 6
 * Safari 4
 
-Once you have a better understanding of the users of your site, you may opt to drop support for any of these combinations.
+Once you have a better understanding of the users of your site, you may opt to drop support for any of these combinations, or even add some additional browsers. 
 
 Other browser support matrixes are available, such as [YUI Graded Browser Support](http://developer.yahoo.com/yui/articles/gbs/), the [BBC Browser Support Standards](http://www.bbc.co.uk/guidelines/futuremedia/technical/browser_support.shtml#support_table), and [jQuery Browser Compatibility](http://docs.jquery.com/Browser_compatibility).
 
