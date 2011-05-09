@@ -207,6 +207,8 @@ Although chaining is a useful feature of jQuery, it's too easy to create unreada
 		.removeClass('disableSubmit');
 {% endhighlight %}
 
+Using jQuery's `end()` to unwind the chaining stack is a sure sign that your chaining statement is in danger of becoming difficult to understand. When your chaining gets this complex, it's best to get a reference to the common ancestor and logically separate your complex chain into several less-complex chains.
+
 <h2 id="usability">Usability</h2>
 
 ### Always put a useful URL in `href`
