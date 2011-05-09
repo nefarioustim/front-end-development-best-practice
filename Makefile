@@ -9,6 +9,7 @@ remote-path = ~/sites/timhuegdon.com/public/front-end-development-best-practice/
 
 build:
 	jekyll
+	rm ./_site/README.md
 	rm ./_site/Makefile
 
 push:
