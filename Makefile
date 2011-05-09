@@ -7,5 +7,8 @@
 remote-host = pegasus
 remote-path = ~/sites/timhuegdon.com/public/front-end-development-best-practice/
 
+build:
+	jekyll
+
 push:
-	rsync --delete -rave ssh ./ $(remote-host):$(remote-path)
+	rsync --delete -rave ssh ./_site/ $(remote-host):$(remote-path)
