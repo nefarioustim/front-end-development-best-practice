@@ -237,3 +237,12 @@ Instead, use a URL that can serve up a representation of the expected state
 Links and buttons are focusable and activatable by default in a browser, which means they are perceivable and operable to screen reader users and keyboard-only users. Rich JavaScript widgets (like video player controls) should be progressively enhanced on-top of elements that, by default, are already accessible.
 
 <h2 id="seo">Search Engine Optimisation</h2>
+
+<h2 id="performance">Performance</h2>
+
+### Profile first, optimise second
+
+Performance is just one aspect that a developer has to concern themselves with when creating a modern website or web application, albeit one that has a definite impact on user satisfaction. Blindly following every piece of optimisation advice you find on the Internet would be time consuming, lead to harder-to-understand code and would predominantly be a colossal waste of time.
+
+Profile your code as you're writing it, and profile the entire project at regular intervals, to identify the hot spots that are causing you the most pain. Once you've done that, you can then apply just the performance optimisations that will help you overcome those issues. Remember to test these as you're going though — advice on the Internet has an unnerving habit of being misleading, and the techniques on offer may not exactly apply to your situation.
+
