@@ -99,6 +99,8 @@ supporting legacy documents.
 
 Avoid client-side libraries such as [modernizr](http://www.modernizr.com/) which pollutes your markup with non-semantic element identifiers.
 
+Note that this means that you'll run into issues if your pages are publicly cacheable, since the content you're serving will change depending on the user's browser. If you're relying on intermediary caching ([squid](http://www.squid-cache.org), [varnish](http://www.varnish-cache.org), or a custom origin CDN) for static pages and you use server-side browser detection, you need to make sure those caches don't inadvertently send the wrong content to the wrong browser. To do this you'll need to `Vary: User-Agent` header in the HTTP response, which instructs any intermediary caches to store multiple copies of the page (one for each `User-Agent` string that it sees) and to inspect the incoming `User-Agent` string when looking for cached responses to the current request.
+
 <h2 id="presentation">Presentation</h2>
 
 ### Use CSS3 presentation effects over old presentation hacks
@@ -204,6 +206,8 @@ Although chaining is a useful feature of jQuery, it's too easy to create unreada
 		.bind('save.form', saveFormHandler)
 		.removeClass('disableSubmit');
 {% endhighlight %}
+
+Using jQuery's `end()` to unwind the chaining stack is a sure sign that your chaining statement is in danger of becoming difficult to understand. When your chaining gets this complex, it's best to get a reference to the common ancestor and logically separate your complex chain into several less-complex chains.
 
 <h2 id="usability">Usability</h2>
 
