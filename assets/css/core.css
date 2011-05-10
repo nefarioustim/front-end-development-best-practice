@@ -36,7 +36,9 @@ em {
 	margin: 15px 0 30px;
 }
 
-#article h2 {
+#article h2,
+#article h3,
+#article h4 {
 	border-bottom: 1px dotted #5D7FA6;
 }
 
@@ -45,12 +47,10 @@ em {
 	margin: 15px 0;
 }
 
-#article h2 {
+#article h2,
+#article h3,
+#article h4 {
 	margin-top: 45px;
-}
-
-#article h3 {
-	margin-top: 30px;
 }
 
 #article ul,
