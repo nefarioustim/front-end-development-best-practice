@@ -11,6 +11,17 @@ end development. This documentation has been collated through many years
 experience by a multitude of front end developers, front end architects, and
 front end development managers. Where possible we have attempted to include all references.
 
+* Available to all
+    * Accessibility
+    * SEO
+* Respectful
+    * Passive
+    * Fast
+    * Secure
+* Crafted
+    * Scalable
+    * Maintainable
+
 <h2 id="browsers">Know your browsers</h2>
 
 It's important to understand the technologies being used to browse your content and test accordingly. This information is best gleaned from your web analytics and log files. Once you have you have analysed and assimilated that information, you'll likely want to follow a **graded browser support** strategy to allow you to focus your development and testing efforts on the browsers that matter the most to you whilst not being held back by legacy browsers being used by a small-but-significant proportion of your visitors. I lieu of having your own browser stats, here's what we'd recommend based on global browser market share:
@@ -53,9 +64,11 @@ There are many reasons to avoid serving XHTML as XML:
     be significant (e.g. loss of ad revenue on an entertainment site,
     forfeiting a sale on an ecommerce site, blocking access to information in
     an emergency on a government site).
+    
   * Some features widely used in text/html, such as `document.write`, error in
     XML. Even if you avoid these features in your code, third-party code you
     wish to integrate (libraries, widgets, ads, feed content, etc.) may not.
+    
   * XHTML has generally poorer compatibility than HTML, as it’s never been a
     priority for browser developers. By default, IE < 9 shows a download
     dialog instead of rendering a webpage when XHTML is served with its
@@ -108,7 +121,9 @@ Note that this means that you'll run into issues if your pages are publicly cach
 The following effects can be done in CSS3, with no fallback when not supported in browsers (like Internet Explorer 6 & 7):
 
 * Rounded corners with `border-radius`
+
 * Gradient backgrounds with `background: gradient` and `background: linear-gradient`. Where possible, and when it causes no adverse effects use Microsoft's group of filters to add gradients for Internet Explorer. Also supply an appropriate default fallback background colour.
+
 * Box shadows with `box-shadow`
 
 Don't forget to add vendor-specific style properties where necessary.
