@@ -6,23 +6,36 @@ layout:     index
 Front End Development Best Practice
 ===================================
 
-This document is a set of standards, best practices, and guidelines for front
-end development. This documentation has been collated through many years
-experience by a multitude of front end developers, front end architects, and
-front end development managers. Where possible we have attempted to include all references.
+Over the past ten years the discipline of Front End Development has emerged from the implementation of web standards by web developers. However, web standards are really only the beginnings of a well developed website. The standards we adopt _beyond_ web standards also inform the quality of our development, and as a result it is often useful to develop best practices for the future. This document is intended as the starting point for your own best practices.
+
+An exceptional website is:
 
 * Available to all
-    * Accessibility
-    * SEO
+    * Standardised
+    * Client agnostic
+    * Accessible
+    * Crawlable
+    * Bookmarkable
 * Respectful
     * Passive
+    * Predictable
     * Fast
     * Secure
 * Crafted
     * Scalable
     * Maintainable
 
-<h2 id="browsers">Know your browsers</h2>
+<h2 id="available-to-all">Available to all</h2>
+
+A high quality website should be available to as many users as possible, regardless of their client, technology, abilities, and situation.
+
+<h3 id="use-web-standards">Use web standards</h3>
+
+Implementing web standards is the foundation for maintainability, accessibility (both for machines _and_ people), stability, and scalability. Web standards are defined by the people who use them; browser makers, web developers, content providers, and other such organisations.
+
+Creating web pages in accordance with the standards shortens site development time and makes pages easier to maintain. Debugging and troubleshooting become easier, because the code follows a standard.
+
+<h3 id="client-agnostic">Be client agnostic</h3>
 
 It's important to understand the technologies being used to browse your content and test accordingly. This information is best gleaned from your web analytics and log files. Once you have you have analysed and assimilated that information, you'll likely want to follow a **graded browser support** strategy to allow you to focus your development and testing efforts on the browsers that matter the most to you whilst not being held back by legacy browsers being used by a small-but-significant proportion of your visitors. I lieu of having your own browser stats, here's what we'd recommend based on global browser market share:
 
