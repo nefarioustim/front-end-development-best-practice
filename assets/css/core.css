@@ -106,7 +106,11 @@ em {
 #footer {
 	clear: both;
 	text-align: center;
+	padding: 45px 0;
 }
+
+/* Footer */
+
 #footer p {
 	margin: 6px 0;
 }
