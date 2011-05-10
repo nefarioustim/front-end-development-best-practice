@@ -31,7 +31,7 @@ A high quality website should be available to as many users as possible, regardl
 
 <h3 id="client-agnostic">Be client agnostic</h3>
 
-It's important to understand the technologies being used to browse your content and test accordingly. This information is best gleaned from your web analytics and log files. Once you have you have analysed and assimilated that information, you'll likely want to follow a **graded browser support** strategy to allow you to focus your development and testing efforts on the browsers that matter the most to you whilst not being held back by legacy browsers being used by a small-but-significant proportion of your visitors. I lieu of having your own browser stats, here's what we'd recommend based on global browser market share:
+It's important to understand the technologies being used to browse your content and test accordingly. This information is best gleaned from your web analytics and log files. Once you have you have analysed and assimilated that information, you'll likely want to follow a **graded browser support** strategy to allow you to focus your development and testing efforts on the browsers that matter the most to you whilst not being held back by legacy browsers being used by a small-but-significant proportion of your visitors. In lieu of having your own browser stats, here's what we'd recommend based on global browser market share:
 
 Primarily, test and ensure that the visitor gets a first-class browsing and interaction experience in the following browsers:
 
