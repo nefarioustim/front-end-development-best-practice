@@ -11,8 +11,8 @@ Over the past ten years the discipline of Front End Development has emerged from
 An exceptional website is:
 
 * Available to all
-    * Standardised
     * Client agnostic
+    * Standardised
     * Accessible
     * Crawlable
     * Bookmarkable
@@ -25,15 +25,9 @@ An exceptional website is:
     * Scalable
     * Maintainable
 
-<h2 id="available-to-all">Available to all</h2>
+<h2 id="available-to-all">Make content available to all</h2>
 
-A high quality website should be available to as many users as possible, regardless of their client, technology, abilities, and situation.
-
-<h3 id="use-web-standards">Use web standards</h3>
-
-Implementing web standards is the foundation for maintainability, accessibility (both for machines _and_ people), stability, and scalability. Web standards are defined by the people who use them; browser makers, web developers, content providers, and other such organisations.
-
-Creating web pages in accordance with the standards shortens site development time and makes pages easier to maintain. Debugging and troubleshooting become easier, because the code follows a standard.
+A high quality website should be available to as many users as possible, regardless of their client, technology, abilities, and situation. The web is entirely designed for sharing content; there's really no reason to break that paradigm.
 
 <h3 id="client-agnostic">Be client agnostic</h3>
 
@@ -58,13 +52,15 @@ Once you have a better understanding of the users of your site, you may opt to d
 
 Other browser support matrixes are available, such as [YUI Graded Browser Support](http://developer.yahoo.com/yui/articles/gbs/), the [BBC Browser Support Standards](http://www.bbc.co.uk/guidelines/futuremedia/technical/browser_support.shtml#support_table), and [jQuery Browser Compatibility](http://docs.jquery.com/Browser_compatibility).
 
-<h2 id="semantic-markup">Semantic Markup</h2>
+<h3 id="leverage-web-standards">Leverage web standards</h3>
 
-### Use HTML not XHTML
+Implementing web standards is the foundation for maintainability, accessibility (both for machines _and_ people), stability, and scalability. Web standards are defined by the people who use them; browser makers, web developers, content providers, and other organisations.
 
-Always use HTML served as text/html instead of XHTML.
+Creating web pages in accordance with the standards shortens site development time and makes pages easier to maintain. Debugging and troubleshooting become easier, because the code follows a standard.
 
-There are many reasons to avoid serving XHTML as XML:
+#### Use HTML not XHTML
+
+Always use HTML served as `text/html` instead of XHTML. There are many reasons to avoid serving XHTML as XML:
 
   * XML has draconian error-handling. Some browsers (like Firefox) implement
     this by rendering a [Yellow Screen of
@@ -103,7 +99,7 @@ See also:
    * [W3C: XHTML Media Types - Second Edition](http://www.w3.org/TR/xhtml-media-types/)
    * [HTML Lint](http://lint.brihten.com/html/)
 
-### Use the HTML Living Standard `DOCTYPE`
+#### Use the HTML Living Standard `DOCTYPE`
 
 In the brave new world of [HTML as a living standard](http://whatwg.org/html),
 the ideal `DOCTYPE` to use is as follows:
@@ -119,11 +115,13 @@ supporting legacy documents.
 
    * Henri Sivonen: [Activating Browser Modes with Doctype](http://hsivonen.iki.fi/doctype/)
 
-### Semantic element identifiers
+#### Use structured semantic markup
 
-### Use server-side browser detection and add classes
+#### Semantic markup includes semantic element identifiers
 
-Avoid client-side libraries such as [modernizr](http://www.modernizr.com/) which pollutes your markup with non-semantic element identifiers.
+#### Avoid client-side browser sniffing
+
+Avoid client-side libraries such as [modernizr](http://www.modernizr.com/) for CSS. These libraries pollute your markup with non-semantic element identifiers.
 
 Note that this means that you'll run into issues if your pages are publicly cacheable, since the content you're serving will change depending on the user's browser. If you're relying on intermediary caching ([squid](http://www.squid-cache.org), [varnish](http://www.varnish-cache.org), or a custom origin CDN) for static pages and you use server-side browser detection, you need to make sure those caches don't inadvertently send the wrong content to the wrong browser. To do this you'll need to `Vary: User-Agent` header in the HTTP response, which instructs any intermediary caches to store multiple copies of the page (one for each `User-Agent` string that it sees) and to inspect the incoming `User-Agent` string when looking for cached responses to the current request.
 
