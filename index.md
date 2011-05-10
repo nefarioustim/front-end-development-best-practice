@@ -125,6 +125,12 @@ Avoid client-side libraries such as [modernizr](http://www.modernizr.com/) for C
 
 Note that this means that you'll run into issues if your pages are publicly cacheable, since the content you're serving will change depending on the user's browser. If you're relying on intermediary caching ([squid](http://www.squid-cache.org), [varnish](http://www.varnish-cache.org), or a custom origin CDN) for static pages and you use server-side browser detection, you need to make sure those caches don't inadvertently send the wrong content to the wrong browser. To do this you'll need to `Vary: User-Agent` header in the HTTP response, which instructs any intermediary caches to store multiple copies of the page (one for each `User-Agent` string that it sees) and to inspect the incoming `User-Agent` string when looking for cached responses to the current request.
 
+<h3 id="accessibility">Build in accessibility from the start</h3>
+
+#### Use links and input buttons for clickable elements
+
+Links and buttons are focusable and activatable by default in a browser, which means they are perceivable and operable to screen reader users and keyboard-only users. Rich JavaScript widgets (like video player controls) should be progressively enhanced on-top of elements that, by default, are already accessible.
+
 <h2 id="presentation">Presentation</h2>
 
 ### Use CSS3 presentation effects over old presentation hacks
@@ -255,14 +261,6 @@ expected state (instead it points to the top of the current document).
 
 Instead, use a URL that can serve up a representation of the expected state
 (e.g. http://example.com/add), or use a button if there’s no such URL.
-
-<h2 id="accessibility">Accessibility</h2>
-
-### Use links and input buttons for clickable elements
-
-Links and buttons are focusable and activatable by default in a browser, which means they are perceivable and operable to screen reader users and keyboard-only users. Rich JavaScript widgets (like video player controls) should be progressively enhanced on-top of elements that, by default, are already accessible.
-
-<h2 id="seo">Search Engine Optimisation</h2>
 
 <h2 id="performance">Performance</h2>
 
