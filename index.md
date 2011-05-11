@@ -89,6 +89,42 @@ Standards](http://www.bbc.co.uk/guidelines/futuremedia/technical/browser_support
 and [jQuery Browser
 Compatibility](http://docs.jquery.com/Browser_compatibility).
 
+#### Avoid client-side browser sniffing
+
+Avoid client-side libraries such as [modernizr](http://www.modernizr.com/) for
+CSS. These libraries pollute your markup with non-semantic element
+identifiers.
+
+Note that this means that you'll run into issues if your pages are publicly
+cacheable, since the content you're serving will change depending on the
+user's browser. If you're relying on intermediary caching
+([squid](http://www.squid-cache.org), [varnish](http://www.varnish-cache.org),
+or a custom origin CDN) for static pages and you use server-side browser
+detection, you need to make sure those caches don't inadvertently send the
+wrong content to the wrong browser. To do this you'll need to `Vary:
+User-Agent` header in the HTTP response, which instructs any intermediary
+caches to store multiple copies of the page (one for each `User-Agent` string
+that it sees) and to inspect the incoming `User-Agent` string when looking for
+cached responses to the current request.
+
+#### Use CSS hacks to work around Internet Explorer CSS issues
+
+Where Internet Explorer 6 and 7 need extra style rules to create a non-broken
+browsing experience, use the underscore and/or star hacks to create
+IE-specific style rules. Use CSS comments to document the use of CSS hacks.
+
+{% highlight css %}
+.module {
+	float: left;
+	_display: inline; /* Double margin fix for IE6 */
+}
+{% endhighlight %}
+
+Keep these CSS hacks as close as possible to the rest of the styles that
+affect the same selector. Don't separate them into a separate IE-only
+stylesheet, since they will be overlooked and forgotten when the main style
+rules change.
+
 <h3 id="leverage-web-standards">Leverage web standards</h3>
 
 Implementing web standards is the foundation for maintainability,
@@ -162,24 +198,6 @@ supporting legacy documents.
 
 #### Semantic markup includes semantic element identifiers
 
-#### Avoid client-side browser sniffing
-
-Avoid client-side libraries such as [modernizr](http://www.modernizr.com/) for
-CSS. These libraries pollute your markup with non-semantic element
-identifiers.
-
-Note that this means that you'll run into issues if your pages are publicly
-cacheable, since the content you're serving will change depending on the
-user's browser. If you're relying on intermediary caching
-([squid](http://www.squid-cache.org), [varnish](http://www.varnish-cache.org),
-or a custom origin CDN) for static pages and you use server-side browser
-detection, you need to make sure those caches don't inadvertently send the
-wrong content to the wrong browser. To do this you'll need to `Vary:
-User-Agent` header in the HTTP response, which instructs any intermediary
-caches to store multiple copies of the page (one for each `User-Agent` string
-that it sees) and to inspect the incoming `User-Agent` string when looking for
-cached responses to the current request.
-
 <h3 id="accessibility">Build in accessibility from the start</h3>
 
 Accessibility is not a "feature", it is a requirement. Ostracising or
@@ -213,24 +231,6 @@ in browsers (like Internet Explorer 6 & 7):
 * Box shadows with `box-shadow`
 
 Don't forget to add vendor-specific style properties where necessary.
-
-### Use CSS hacks to work around Internet Explorer CSS issues
-
-Where Internet Explorer 6 and 7 need extra style rules to create a non-broken
-browsing experience, use the underscore and/or star hacks to create
-IE-specific style rules. Use CSS comments to document the use of CSS hacks.
-
-{% highlight css %}
-.module {
-	float: left;
-	_display: inline; /* Double margin fix for IE6 */
-}
-{% endhighlight %}
-
-Keep these CSS hacks as close as possible to the rest of the styles that
-affect the same selector. Don't separate them into a separate IE-only
-stylesheet, since they will be overlooked and forgotten when the main style
-rules change.
 
 ### Use overflow to self-clear contained floats
 
