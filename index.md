@@ -40,6 +40,15 @@ paradigm.
 
 <h3 id="client-agnostic">Be client agnostic</h3>
 
+The users' choice of browsing client should be mostly irrelevant to your
+decisions as a web developer. Obviously there are occasional exceptions to
+this rule, usually where user input and control is different. Examples of
+exceptions are building in accessibility or developing mobile, touch, and
+printer stylesheets. Even with these exceptions, however, we should always
+attempt to support the largest range of devices with the minimum adjustment.
+
+#### Implement a browser support standard
+
 It's important to understand the technologies being used to browse your
 content and test accordingly. This information is best gleaned from your web
 analytics and log files. Once you have you have analysed and assimilated that
