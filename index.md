@@ -28,8 +28,8 @@ An exceptional website is:
     * Fast
     * Secure
 * Crafted
-    * Scalable
     * Maintainable
+    * Scalable
 
 <h2 id="available-to-all">Make content available to all</h2>
 
