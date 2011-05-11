@@ -16,10 +16,10 @@ practices.
 
 An exceptional website is:
 
-* Available to all
-    * Client agnostic
-    * Standardised
-    * Accessible
+* [Available to all](#available-to-all)
+    * [Client agnostic](#client-agnostic)
+    * [Standardised](#leverage-web-standards)
+    * [Accessible](#accessibility)
     * Crawlable
     * Bookmarkable
 * Respectful
@@ -181,6 +181,12 @@ that it sees) and to inspect the incoming `User-Agent` string when looking for
 cached responses to the current request.
 
 <h3 id="accessibility">Build in accessibility from the start</h3>
+
+Accessibility is not a "feature", it is a requirement. Ostracising or
+punishing a user simply because of the technology they use to browse your
+content is unacceptable, and even illegal in some countries. Further to this,
+developing accessible websites is not _difficult_ but does require a little
+extra thought and diligence at times.
 
 #### Use links and input buttons for clickable elements
 
