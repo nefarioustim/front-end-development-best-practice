@@ -47,7 +47,7 @@ exceptions are building in accessibility or developing mobile, touch, and
 printer stylesheets. Even with these exceptions, however, we should always
 attempt to support the largest range of devices with the minimum adjustment.
 
-#### Implement a browser support standard
+#### A browser support standard will help
 
 It's important to understand the technologies being used to browse your
 content and test accordingly. This information is best gleaned from your web
@@ -82,32 +82,30 @@ Once you have a better understanding of the users of your site, you may opt to
 drop support for any of these combinations, or even add some additional
 browsers.
 
-Other browser support matrixes are available, such as [YUI Graded Browser
-Support](http://developer.yahoo.com/yui/articles/gbs/), the [BBC Browser
-Support
-Standards](http://www.bbc.co.uk/guidelines/futuremedia/technical/browser_support.shtml#support_table),
-and [jQuery Browser
-Compatibility](http://docs.jquery.com/Browser_compatibility).
+Other browser support matrices are available:
 
-#### Avoid client-side browser sniffing
+* [YUI Graded Browser Support](http://developer.yahoo.com/yui/articles/gbs/)
+* [BBC Browser Support Standards](http://www.bbc.co.uk/guidelines/futuremedia/technical/browser_support.shtml#support_table),
+* [jQuery Browser Compatibility](http://docs.jquery.com/Browser_compatibility).
 
-Avoid client-side libraries such as [modernizr](http://www.modernizr.com/) for
-CSS. These libraries pollute your markup with non-semantic element
-identifiers.
+#### Support browsers effectively and avoid pixel perfection
 
-Note that this means that you'll run into issues if your pages are publicly
-cacheable, since the content you're serving will change depending on the
-user's browser. If you're relying on intermediary caching
-([squid](http://www.squid-cache.org), [varnish](http://www.varnish-cache.org),
-or a custom origin CDN) for static pages and you use server-side browser
-detection, you need to make sure those caches don't inadvertently send the
-wrong content to the wrong browser. To do this you'll need to `Vary:
-User-Agent` header in the HTTP response, which instructs any intermediary
-caches to store multiple copies of the page (one for each `User-Agent` string
-that it sees) and to inspect the incoming `User-Agent` string when looking for
-cached responses to the current request.
+Requiring the same experience for all users creates a barrier to
+participation. Availability and accessibility of content should be our key
+priority. With this as an ideal, there is absolutely no reason to seek pixel
+perfection cross-browser. A good front end developer should take
+responsibility to underline this fact and educate where appropriate.
 
-#### Use CSS hacks to work around Internet Explorer CSS issues
+See also:
+
+* [Effective browser support](http://boagworld.com/technology/effective-browser-support/)
+* [Cross-browser support: Be gone with pixel perfection](http://www.gottaquirk.com/2011/03/11/cross-browser-support-be-gone-with-pixel-perfection/)
+
+#### Improve graceful CSS degradation with unobtrusive hacks
+
+Sometimes there is a need to overcome significant rendering issues with
+certain browser engines. To do this you should not be afraid of using an
+unobtrusive hack such as the IE underscore and star hacks:
 
 Where Internet Explorer 6 and 7 need extra style rules to create a non-broken
 browsing experience, use the underscore and/or star hacks to create
@@ -120,10 +118,52 @@ IE-specific style rules. Use CSS comments to document the use of CSS hacks.
 }
 {% endhighlight %}
 
-Keep these CSS hacks as close as possible to the rest of the styles that
-affect the same selector. Don't separate them into a separate IE-only
-stylesheet, since they will be overlooked and forgotten when the main style
-rules change.
+The benefit of managing the adjustment this way is that you can seat it next
+to the original property adjustment and comment accordingly. This allows a
+clearer understanding when you come back to this rule later during
+maintenance.
+
+This rule only applies where the CSS hack is unobtrusive enough to not require
+an entirely new selector, i.e. it only affects a single property declaration
+as above.
+
+See also:
+
+* [CSS hacks for IE only style rules](http://webstandardstips.com/2008/11/18/css-hacks-for-ie-only-style-rules/)
+* [Targeting IE 5.x, 6 and 7 Separately](http://www.ejeliot.com/blog/63)
+* [CSS Hacks: The underscore hack](http://www.css-zibaldone.com/articles/hacks/csshacks.html#underscore-hack)
+
+#### Favour feature sniffing over browser sniffing in JavaScript
+
+
+
+#### Favour browser sniffing over feature sniffing for CSS
+
+{% highlight html %}
+<html lang="en" dir="ltr" id="modernizr-com" class=" js flexbox canvas
+canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb
+hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize
+borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns
+cssgradients cssreflections csstransforms csstransforms3d csstransitions
+fontface video audio localstorage sessionstorage webworkers applicationcache
+svg inlinesvg smil svgclippaths">
+{% endhighlight %}
+
+Avoid client-side libraries such as [modernizr](http://www.modernizr.com/) for
+CSS. These libraries pollute your markup with non-semantic element
+identifiers.
+
+**Important Note:** This means that you'll run into issues if your pages are
+publicly cacheable, since the content you're serving will change depending on
+the user's browser. If you're relying on intermediary caching
+([squid](http://www.squid-cache.org), [varnish](http://www.varnish-cache.org),
+or a custom origin CDN) for static pages and you use server-side browser
+detection, you need to make sure those caches don't inadvertently send the
+wrong content to the wrong browser. To do this you'll need to `Vary:
+User-Agent` header in the HTTP response, which instructs any intermediary
+caches to store multiple copies of the page (one for each `User-Agent` string
+that it sees) and to inspect the incoming `User-Agent` string when looking for
+cached responses to the current request.
 
 <h3 id="leverage-web-standards">Leverage web standards</h3>
 
