@@ -94,7 +94,7 @@ Requiring the same experience for all users creates a barrier to
 participation. Availability and accessibility of content should be our key
 priority. With this as an ideal, there is absolutely no reason to seek pixel
 perfection cross-browser. A good front end developer should take
-responsibility to underline this fact and educate where appropriate.
+responsibility to communicate this and educate where appropriate.
 
 See also:
 
