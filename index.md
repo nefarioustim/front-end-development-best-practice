@@ -165,6 +165,8 @@ caches to store multiple copies of the page (one for each `User-Agent` string
 that it sees) and to inspect the incoming `User-Agent` string when looking for
 cached responses to the current request.
 
+#### Target IE specifically with conditional comments
+
 <h3 id="leverage-web-standards">Leverage web standards</h3>
 
 Implementing web standards is the foundation for maintainability,
