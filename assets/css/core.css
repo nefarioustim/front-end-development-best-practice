@@ -40,6 +40,7 @@ em {
 #article h3,
 #article h4 {
 	border-bottom: 1px dotted #5D7FA6;
+	padding-bottom: 5px;
 }
 
 #article h2,

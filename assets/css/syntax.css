@@ -1,4 +1,12 @@
-.highlight .lineno { border-right: 1px solid #ccc; color: #ccc; display: -moz-inline-box; display: inline-block; padding-right: 5px; *display: inline; *zoom: 1;}
+.highlight .lineno {
+	border-right: 1px solid #ccc;
+	color: #ccc;
+	display: inline-block;
+	display: -moz-inline-box;
+	padding-right: 5px;
+	*display: inline;
+	*zoom: 1;
+}
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */

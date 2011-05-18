@@ -1,7 +1,7 @@
 body {
 	font: 16px/1.4 "helvetica neue", arial, helvetica, sans-serif;
-	*font-size:small;
-	*font:x-small;
+	*font-size: small;
+	*font-size: x-small;
 }
 
 select,
@@ -13,7 +13,7 @@ textarea {
 
 table {
 	font-size: inherit;
-	font: 100%;
+	font-size: 100%;
 }
 
 code,
@@ -31,7 +31,6 @@ h3,
 h4,
 h5,
 h6 {
-	/*font-family: georgia, times, serif;*/
 	font-weight: bold;
 }
 
