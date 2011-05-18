@@ -15,14 +15,15 @@ css-index-files =			$(css-path)/reset.css \
 							$(css-path)/syntax.css
 
 all:
-	jekyll
-	rm ./_site/README.md
-	rm ./_site/Makefile
+	@jekyll
+	@rm ./_site/README.md
+	@rm ./_site/Makefile
 
 install: clean all push
 
 push:
-	rsync --delete -rave ssh ./_site/ $(remote-host):$(remote-path)
+	@rsync --delete -rave ssh ./_site/ $(remote-host):$(remote-path)
 
 clean:
-	rm -rf ./_site/*
+	@rm -rf ./_site/*
+	@echo "Clean complete..."
