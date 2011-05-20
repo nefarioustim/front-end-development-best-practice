@@ -189,6 +189,10 @@ This stops us having to maintain a separate stylesheet specifically for IE and
 keeps related CSS rules together. This improves readability and ensures that
 all browser fixes are next to each other when you return at a later date.
 
+See also:
+
+* #TODO
+
 #### Favour feature sniffing over browser sniffing in JavaScript
 
 Browser "sniffing" is the act of attempting to discern a user's browser by
@@ -218,6 +222,10 @@ The obvious advantage here is that it is browser agnostic; there are no
 assumptions as to which browser is involved at all. Using this technique, we
 overcome the scalability and maintenance headaches incurred through browser
 sniffing, and we can develop for graceful degradation from the outset.
+
+See also:
+
+* #TODO
 
 #### Favour browser sniffing over feature sniffing for CSS
 
