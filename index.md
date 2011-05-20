@@ -371,6 +371,8 @@ in browsers (like Internet Explorer 6 & 7):
 
 * Box shadows with `box-shadow`
 
+* Text shadows with `text-shadow`
+
 Don't forget to add vendor-specific style properties where necessary.
 
 ### Use overflow to self-clear contained floats
