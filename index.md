@@ -327,7 +327,7 @@ the opening `head` tag as possible:
 <html lang="en-gb" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Time machines of the Renaissance</title>
+        <title>Chronological displacement engines of the Renaissance</title>
         …
 {% endhighlight %}
 
