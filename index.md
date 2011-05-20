@@ -337,6 +337,10 @@ See also:
 
 #### Use structured semantic markup
 
+Decorate your content with well structured semantic markup. This means making
+use of HTML elements to provide more information about the content within
+them.
+
 #### Semantic markup includes semantic element identifiers
 
 <h3 id="accessibility">Build in accessibility from the start</h3>
