@@ -140,30 +140,34 @@ admit that the majority of woes we experience in CSS are as a direct result of
 features that any given version of Internet Explorer has not implemented.
 
 The best technique for targetting IE is to adopt conditional comments to add
-IE specific classes to the root element of the page in HTML:
+IE specific classes to the `body` element of the page in HTML:
 
 {% highlight html %}
 <!--[if lt IE 7 ]>
-<html lang="en" dir="ltr" class="ie ie6">
+<body class="ie ie6">
 <![endif]--> 
 <!--[if IE 7 ]>
-<html lang="en" dir="ltr" class="ie ie7">
+<body class="ie ie7">
 <![endif]--> 
 <!--[if IE 8 ]>
-<html lang="en" dir="ltr" class="ie ie8">
+<body class="ie ie8">
 <![endif]--> 
 <!--[if IE 9 ]>
-<html lang="en" dir="ltr" class="ie ie9">
+<body class="ie ie9">
 <![endif]--> 
 <!--[if gt IE 9]>
-<html lang="en" dir="ltr" class="ie">
+<body class="ie">
 <![endif]-->
 <!--[if !IE]><!-->
-<html lang="en" dir="ltr">
+<body>
 <!--<![endif]-->
 {% endhighlight %}
 
-This then allows us to write CSS like so:
+We're using the `body` element here because attaching the `ie` classes to the
+`html` element would result in IE not forcing standards mode and potentially
+trigger various 'quirks' rendering modes.
+
+With the classes in place we can then write CSS rules like so:
 
 {% highlight css %}
 #navigation {
