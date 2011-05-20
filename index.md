@@ -191,7 +191,7 @@ all browser fixes are next to each other when you return at a later date.
 
 See also:
 
-* #TODO
+* \#TODO
 
 #### Favour feature sniffing over browser sniffing in JavaScript
 
@@ -225,7 +225,7 @@ sniffing, and we can develop for graceful degradation from the outset.
 
 See also:
 
-* #TODO
+* \#TODO
 
 #### Favour browser sniffing over feature sniffing for CSS
 
