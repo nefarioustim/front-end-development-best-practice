@@ -51,7 +51,7 @@ attempt to support the largest range of devices with the minimum adjustment.
 
 It's important to understand the technologies being used to browse your
 content and test accordingly. This information is best gleaned from your web
-analytics and log files. Once you have you have analysed and assimilated that
+analytics and log files. Once you have analysed and assimilated that
 information, you'll likely want to follow a **graded browser support**
 strategy to allow you to focus your development and testing efforts on the
 browsers that matter the most to you whilst not being held back by legacy
@@ -135,7 +135,33 @@ See also:
 
 #### Favour feature sniffing over browser sniffing in JavaScript
 
+Browser "sniffing" is the act of attempting to discern a user's browser by
+some means. This information can then be used in conditional code to control
+output or interaction for a specific browser. This technique used to be used a
+great deal in JavaScript, when browsers had very different rendering engines
+and didn't all conform to web standards.
 
+Browser sniffing is not a good solution. If you adopt it, you will usually end
+up maintaining separate streams of development whenever you need to add or
+update features. It's also of note that some browsers identify themselves
+incorrectly to get _around_ legacy browser sniffing code. In short, this
+technique does not scale.
+
+A more scalable approach is to use object detection in JavaScript to discover
+if a feature is available before you use it. An example of this might be:
+
+{% highlight javascript %}
+// Test if querySelector exists on the document object
+if (document.querySelector) {
+    // Make use of it
+    element = document.querySelector(selectors);
+}
+{% endhighlight %}
+
+The obvious advantage here is that it is browser agnostic; there are no
+assumptions as to which browser is involved at all. Using this technique, we
+overcome the scalability and maintenance headaches incurred through browser
+sniffing, and we can develop for graceful degradation from the outset.
 
 #### Favour browser sniffing over feature sniffing for CSS
 
