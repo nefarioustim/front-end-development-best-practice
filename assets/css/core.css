@@ -74,11 +74,14 @@ em {
 	margin: 5px 0 5px 45px;
 }
 
-#article code,
-#article kbd,
-#article samp,
-#article tt {
+#article p > code,
+#article p > kbd,
+#article p > samp,
+#article p > tt {
+	background: #BAD2E9;
+	border: 1px solid #9AB2C9;
 	color: #609;
+	padding: 0.2ex 0.5ex;
 }
 
 /* Accessibles */
