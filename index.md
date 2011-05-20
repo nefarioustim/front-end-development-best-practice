@@ -316,6 +316,41 @@ supporting legacy documents.
 
    * Henri Sivonen: [Activating Browser Modes with Doctype](http://hsivonen.iki.fi/doctype/)
 
+#### Always specify a language and text direction
+
+For improved internationalisation support, always specify a language and
+direction in the root element of your document. This is used by all user
+agents, screen readers, and search engine spiders to better understand how to
+voice your content:
+
+{% highlight html %}
+<html lang="en-gb" dir="ltr">
+{% endhighlight %}
+
+See also:
+
+* \#TODO
+
+#### Always specify a character-set within your document
+
+It is important to make sure you specify a character-set within your document
+in case so that you can be sure your content is displayed properly by user
+agents. The correct position for this is before any other content or meta content within your page. For this reason, it's best to place it as close to
+the opening `head` tag as possible:
+
+{% highlight html %}
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Time machines of the Renaissance</title>
+        …
+{% endhighlight %}
+
+See also:
+
+* \#TODO
+
 #### Use structured semantic markup
 
 #### Semantic markup includes semantic element identifiers
