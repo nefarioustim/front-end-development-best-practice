@@ -133,6 +133,62 @@ See also:
 * [Targeting IE 5.x, 6 and 7 Separately](http://www.ejeliot.com/blog/63)
 * [CSS Hacks: The underscore hack](http://www.css-zibaldone.com/articles/hacks/csshacks.html#underscore-hack)
 
+#### Target IE specifically with conditional comments
+
+If we're entirely honest with ourselves as web developers, we can probably
+admit that the majority of woes we experience in CSS are as a direct result of
+features that any given version of Internet Explorer has not implemented.
+
+The best technique for targetting IE is to adopt conditional comments to add
+IE specific classes to the root element of the page in HTML:
+
+{% highlight html %}
+<!--[if lt IE 7 ]>
+<html lang="en" dir="ltr" class="ie ie6">
+<![endif]--> 
+<!--[if IE 7 ]>
+<html lang="en" dir="ltr" class="ie ie7">
+<![endif]--> 
+<!--[if IE 8 ]>
+<html lang="en" dir="ltr" class="ie ie8">
+<![endif]--> 
+<!--[if IE 9 ]>
+<html lang="en" dir="ltr" class="ie ie9">
+<![endif]--> 
+<!--[if gt IE 9]>
+<html lang="en" dir="ltr" class="ie">
+<![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" dir="ltr">
+<!--<![endif]-->
+{% endhighlight %}
+
+This then allows us to write CSS like so:
+
+{% highlight css %}
+#navigation {
+    float: left;
+    margin-right: 30px;
+    background: #ccc;
+    background: #ccc -webkit-gradient(linear, left top, left bottom, from(#999), to(#ccc)) no-repeat;
+    background: #ccc -moz-linear-gradient(top,  #999,  #ccc) no-repeat;
+}
+/*
+    IE specific rule to fix double margin bug, remove potentially 
+    render-slowing filters and trigger hasLayout.
+*/
+.ie #navigation {
+    display: inline;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff999999, endColorstr=#ffcccccc);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff999999, endColorstr=#ffcccccc)";
+    zoom: 1;
+}
+{% endhighlight %}
+
+This stops us having to maintain a separate stylesheet specifically for IE and
+keeps related CSS rules together. This improves readability and ensures that
+all browser fixes are next to each other when you return at a later date.
+
 #### Favour feature sniffing over browser sniffing in JavaScript
 
 Browser "sniffing" is the act of attempting to discern a user's browser by
@@ -165,19 +221,7 @@ sniffing, and we can develop for graceful degradation from the outset.
 
 #### Favour browser sniffing over feature sniffing for CSS
 
-{% highlight html %}
-<html lang="en" dir="ltr" id="modernizr-com" class=" js flexbox canvas
-canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb
-hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize
-borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns
-cssgradients cssreflections csstransforms csstransforms3d csstransitions
-fontface video audio localstorage sessionstorage webworkers applicationcache
-svg inlinesvg smil svgclippaths">
-{% endhighlight %}
 
-Avoid client-side libraries such as [modernizr](http://www.modernizr.com/) for
-CSS. These libraries pollute your markup with non-semantic element
-identifiers.
 
 **Important Note:** This means that you'll run into issues if your pages are
 publicly cacheable, since the content you're serving will change depending on
@@ -190,8 +234,6 @@ User-Agent` header in the HTTP response, which instructs any intermediary
 caches to store multiple copies of the page (one for each `User-Agent` string
 that it sees) and to inspect the incoming `User-Agent` string when looking for
 cached responses to the current request.
-
-#### Target IE specifically with conditional comments
 
 <h3 id="leverage-web-standards">Leverage web standards</h3>
 
