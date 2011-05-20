@@ -231,22 +231,6 @@ See also:
 
 * \#TODO
 
-#### Favour browser sniffing over feature sniffing for CSS
-
-
-
-**Important Note:** This means that you'll run into issues if your pages are
-publicly cacheable, since the content you're serving will change depending on
-the user's browser. If you're relying on intermediary caching
-([squid](http://www.squid-cache.org), [varnish](http://www.varnish-cache.org),
-or a custom origin CDN) for static pages and you use server-side browser
-detection, you need to make sure those caches don't inadvertently send the
-wrong content to the wrong browser. To do this you'll need to `Vary:
-User-Agent` header in the HTTP response, which instructs any intermediary
-caches to store multiple copies of the page (one for each `User-Agent` string
-that it sees) and to inspect the incoming `User-Agent` string when looking for
-cached responses to the current request.
-
 <h3 id="leverage-web-standards">Leverage web standards</h3>
 
 Implementing web standards is the foundation for maintainability,
