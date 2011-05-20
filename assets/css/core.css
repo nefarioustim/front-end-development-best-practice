@@ -36,7 +36,11 @@ em {
 	margin: 15px 0 30px;
 }
 
-#article h2,
+#article h2 {
+	border-top: 4px solid #5D7FA6;
+	padding-top: 15px;
+}
+
 #article h3,
 #article h4 {
 	border-bottom: 1px dotted #5D7FA6;
