@@ -195,9 +195,11 @@ all browser fixes are next to each other when you return at a later date.
 
 See also:
 
-* \#TODO
+* [Conditional stylesheets vs CSS hacks? Answer: Neither!](http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/)
+* [Targeting IE Using Conditional Comments and Just One Stylesheet](http://www.positioniseverything.net/articles/cc-plus.html)
+* [Defining Document Compatibility](http://msdn.microsoft.com/en-us/library/cc288325%28v%3Dvs.85%29.aspx)
 
-#### Favour feature sniffing over browser sniffing in JavaScript
+#### Favour object detection over browser sniffing in JavaScript
 
 Browser "sniffing" is the act of attempting to discern a user's browser by
 some means. This information can then be used in conditional code to control
@@ -229,7 +231,8 @@ sniffing, and we can develop for graceful degradation from the outset.
 
 See also:
 
-* \#TODO
+* [Quirks Mode: Object detection](http://www.quirksmode.org/js/support.html)
+* [Apple: Object detection](http://developer.apple.com/internet/webcontent/objectdetection.html)
 
 <h3 id="leverage-web-standards">Leverage web standards</h3>
 
@@ -313,7 +316,7 @@ voice your content:
 
 See also:
 
-* \#TODO
+* [W3C I18n Best Practices](http://www.w3.org/TR/i18n-html-tech-lang/#ri20030112.213801634)
 
 #### Always specify a character-set within your document
 
@@ -333,7 +336,8 @@ the opening `head` tag as possible:
 
 See also:
 
-* \#TODO
+* [Dive into HTML5: Semantics](http://diveintohtml5.org/semantics.html#encoding)
+* [Web Standards Project: Specifying Character Encoding](http://www.webstandards.org/learn/articles/askw3c/dec2002/)
 
 #### Use structured semantic markup
 
