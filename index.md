@@ -339,13 +339,68 @@ See also:
 * [Dive into HTML5: Semantics](http://diveintohtml5.org/semantics.html#encoding)
 * [Web Standards Project: Specifying Character Encoding](http://www.webstandards.org/learn/articles/askw3c/dec2002/)
 
-#### Use structured semantic markup
+#### Use semantic markup
 
-Decorate your content with well structured semantic markup. This means making
-use of HTML elements to provide more information about the content within
-them.
+Decorate your content with well formed semantic markup. This means annotating
+content with elements that provide additional reference. Examples might be:
+
+* **Tables**: Use the `<table>` element to illustrate tabular data. Tables
+  should not be used for layout of any form.
+
+* **Emphasis**: Use the `<em>` and `<strong>` elements to denote emphasis on
+  inline content. Avoid `<b>`, `<i>`, and `<u>`.
+
+* **Lists**: Wrap lists within `<ul>`, `<ol>`, and `<dl>` elements, and list
+  items in `<li>` elements. Try to avoid delimited strings of characters as an
+  alternative.
+
+See also:
+
+* \#TODO
 
 #### Semantic markup includes semantic element identifiers
+
+Good semantic markup includes semantic element identifiers (i.e. the `id` and
+`class` attributes). Try to improve the semantics of your markup by denoting
+it with classes and IDs that add to the description of the content within. For
+example:
+
+
+
+#### Use correctly structured headings
+
+Well structured semantic markup also infers using correctly nested heading
+elements to provide a structure:
+
+{% highlight html %}
+<h1>My page title</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<h2>A sub-heading</h2>
+
+<h3>A sub-sub-heading</h3>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<h3>Another sub-sub-heading</h3>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.</p>
+{% endhighlight %}
+
+Try to use only a single `<h1>` per page. Valid HTML requires that you follow
+`<h1>`s only with `<h2>`s, `<h2>`s only with `<h3>`s, and so on.
+
+Headings should only be used as a structured outline of your document, and not
+as feature navigation landmarks within your page. For example, try to avoid
+ambiguous headings such as "navigation" or "search".
+
+See also:
+
+* \#TODO
 
 <h3 id="accessibility">Build in accessibility from the start</h3>
 
