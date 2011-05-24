@@ -341,7 +341,7 @@ See also:
 
 #### Use semantic markup
 
-Decorate your content with well formed semantic markup. This means annotating
+Decorate your content with well crafted semantic markup. This means annotating
 content with elements that provide additional reference. Examples might be:
 
 * **Tables**: Use the `<table>` element to illustrate tabular data. Tables
