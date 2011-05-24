@@ -365,7 +365,31 @@ Good semantic markup includes semantic element identifiers (i.e. the `id` and
 it with classes and IDs that add to the description of the content within. For
 example:
 
+\#TODO: NEEDS MORE COMPLEX EXAMPLE
 
+{% highlight html %}
+<div class="main-column">
+    <p>This is my primary content.</p>
+</div>
+
+<div class="right-column">
+    <p>This is my primary content.</p>
+</div>
+
+vs.
+
+<div class="article">
+    <p>This is my primary content.</p>
+</div>
+
+<div class="aside">
+    <p>This is my primary content.</p>
+</div>
+{% endhighlight %}
+
+See also:
+
+* \#TODO
 
 #### Use correctly structured headings
 
